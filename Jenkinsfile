@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        jdk 'Java17'   // Имя JDK, настроенное в Jenkins Global Tools
-        maven 'Maven3' // Имя Maven, настроенное в Jenkins Global Tools
+        jdk 'jdk-21'           // Имя JDK из Jenkins Global Tool Configuration
+        maven 'maven-3.9.11'   // Имя Maven из Jenkins Global Tool Configuration
     }
 
     stages {
@@ -27,7 +27,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploy step: здесь можно добавить деплой на сервер или Docker'
+                echo 'Deploy step: здесь можно добавить деплой'
             }
         }
     }
